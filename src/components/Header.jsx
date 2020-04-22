@@ -1,5 +1,6 @@
 import React from 'react'
 import {css} from '@emotion/core'
+import Nav from './Nav'
 
 const Header = () => {
   return (
@@ -15,7 +16,7 @@ const Header = () => {
             max-width: 1200px;
             margin: 0 auto;
 
-            @media screen and (min-width: 768pc) {
+            @media screen and (min-width: 768px) {
               display: flex;
               align-items: center;
               justify-content: space-between;
@@ -27,7 +28,10 @@ const Header = () => {
             color:#fff;
             text-align: center;
           `
-        }>Hotel Gatsby</h1>
+        }>
+          Hotel Gatsby
+        </h1>
+        <Nav/>
       </div>
     </header>
   )
