@@ -1,10 +1,20 @@
 import React from 'react'
+import {css} from '@emotion/core'
+
+import '../styles/Header.css'
 
 const Header = () => {
   return (
-    <div>
-      <h1>Desde Header</h1>
-    </div>
+    <header
+      css={css`
+        h1 {
+        }
+      `}
+    >
+      <div className="header">
+        <h1>Hotel Gatsby</h1>
+      </div>
+    </header>
   )
 }
 
