@@ -6,45 +6,55 @@ import {Global, css} from '@emotion/core'
 const layout = ({children}) => {
   return (
     <>
-    <Global
-      styles={css`
-        html{
-          font-size: 62.5%;
-        }
+      <Global
+        styles={css`
+          html {
+            font-size: 62.5%;
+          }
 
-        body{
-          font-size: 16px;
-          font-size: 1.6rem;
-          line-height: 1.5;
-        }
+          body {
+            font-size: 18px;
+            font-size: 1.8rem;
+            line-height: 1.5;
+            font-family: "PT Sans", sans-serif;
+          }
 
-        h1, h2, h3 {
-          margin: 0px;
-          line-height: 1.5;
-        }
+          h1,
+          h2,
+          h3 {
+            margin: 0px;
+            line-height: 1.5;
+          }
 
-        h1, h2{
-          font-family: 'Roboto', sans-serif;
-        }
+          h1,
+          h2 {
+            font-family: "Roboto", sans-serif;
+          }
 
-        h3{
-          font-family: 'PT Sans', sans-serif;
-        }
+          h3 {
+            font-family: "PT Sans", sans-serif;
+          }
 
-        ul{
-          list-style: none;
-          margin: 0;
-          padding: 0;
-        }
-      `}
-    />
+          ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+        `}
+      />
       <Helmet>
         <title>Gatsby Hotel</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto:400,700&display=swap" rel="stylesheet" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto:400,700&display=swap"
+          rel="stylesheet"
+        />
       </Helmet>
 
-      <Header/>
+      <Header />
       {children}
     </>
   )
