@@ -1,11 +1,12 @@
 import React from "react"
 import Layout from '../components/Layout'
 import ImagenHotel from '../components/ImagenHotel.jsx'
+import ContenidoInicio from "../components/ContenidoInicio"
 
 const IndexPage = () => (
   <Layout>
     <ImagenHotel/>
-    <h1>Index</h1>
+    <ContenidoInicio/>
   </Layout>
 )
 
