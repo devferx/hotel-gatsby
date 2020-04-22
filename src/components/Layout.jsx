@@ -18,12 +18,12 @@ const layout = ({children}) => {
           line-height: 1.5;
         }
 
-        h1,h2,h3{
-          margin: 0;
+        h1, h2, h3 {
+          margin: 0px;
           line-height: 1.5;
         }
 
-        h1,h2{
+        h1, h2{
           font-family: 'Roboto', sans-serif;
         }
 
@@ -33,6 +33,8 @@ const layout = ({children}) => {
 
         ul{
           list-style: none;
+          margin: 0;
+          padding: 0;
         }
       `}
     />
