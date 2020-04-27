@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import {Helmet} from 'react-helmet'
 import {Global, css} from '@emotion/core'
+import Footer from './Footer'
 
 const layout = ({children}) => {
   return (
@@ -60,6 +61,7 @@ const layout = ({children}) => {
 
       <Header />
       {children}
+      <Footer/>
     </>
   )
 }
