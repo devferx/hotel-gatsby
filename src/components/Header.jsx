@@ -31,7 +31,7 @@ const Header = () => {
             }
           `
         }>
-        <EnlaceHome><h1>Hotel Gatsby</h1></EnlaceHome>
+        <EnlaceHome to="/"><h1>Hotel Gatsby</h1></EnlaceHome>
         <Nav/>
       </div>
     </header>

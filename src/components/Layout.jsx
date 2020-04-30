@@ -1,10 +1,18 @@
-import React from 'react'
-import Header from './Header'
-import {Helmet} from 'react-helmet'
-import {Global, css} from '@emotion/core'
-import Footer from './Footer'
+import React from "react"
+import Header from "./Header"
+import { Helmet } from "react-helmet"
+import { Global, css } from "@emotion/core"
+import Footer from "./Footer"
+import getSeo from "../hooks/useSeo"
 
-const layout = ({children}) => {
+const layout = ({ children }) => {
+  const seo = getSeo()
+  const {
+    siteName,
+    fallbackSeo: { description, title },
+  } = seo
+
+  console.log(seo)
   return (
     <>
       <Global
@@ -13,7 +21,9 @@ const layout = ({children}) => {
             font-size: 62.5%;
             box-sizing: border-box;
           }
-          *, *:before, *:after {
+          *,
+          *:before,
+          *:after {
             box-sizing: inherit;
           }
 
@@ -48,7 +58,8 @@ const layout = ({children}) => {
         `}
       />
       <Helmet>
-        <title>Gatsby Hotel</title>
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -61,7 +72,7 @@ const layout = ({children}) => {
 
       <Header />
       {children}
-      <Footer/>
+      <Footer title={title} />
     </>
   )
 }

@@ -10,7 +10,7 @@ const EnlaceHome = styled(Link)`
   text-decoration:none;
 `
 
-const Footer = () => {
+const Footer = ({title}) => {
   const year = new Date().getFullYear();
   return (
     <>
@@ -35,7 +35,7 @@ const Footer = () => {
             `
           }>
           <Nav />
-          <EnlaceHome><h1>Hotel Gatsby</h1></EnlaceHome>
+          <EnlaceHome to="/"><h1>Hotel Gatsby</h1></EnlaceHome>
         </div>
       </footer>
       <p
@@ -46,7 +46,7 @@ const Footer = () => {
           margin:0;
           padding: 1rem
         `}
-      >Hotel Gatsby. Todos los derechos reservados {year} &copy;</p>
+      >{title}. Todos los derechos reservados {year} &copy;</p>
     </>
   )
 }
